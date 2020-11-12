@@ -1,10 +1,10 @@
-// Problem 1
-
 #include <iostream>
 
 using namespace std;
 
 #define pi 3.14
+
+// Problem 1
 
 void Area(float circumference)
 {
@@ -31,6 +31,8 @@ void min_max_table(float* table, int table_size)
 	cout << " minimum of the table :" << min << " maximum of the table :" << max << endl;
 }
 
+// Problem 3
+
 void Fibonacci_Series(int rank)
 {
 	int tmp1 = 0;
@@ -48,6 +50,21 @@ void Fibonacci_Series(int rank)
 	cout << endl;
 }
 
+// Problem 4
+
+void Multiplication_Table(uint8_t column_size, uint8_t row_size)
+{
+	for (int i = 1; i <= row_size; i++)
+	{
+		for (int k = 1; k <= column_size; k++)
+			cout << i * k << " ";
+		cout << endl;
+	}
+}
+
+
+// Problem 5
+
 
 void Truth_Table(bool input1, bool input2, bool input3)
 {
@@ -64,6 +81,7 @@ int main()
 	int rank = 0;
 	float table[50];
 	bool in1, in2, in3;
+	int column_size, row_size;
 
 	cout << "enter the circumference of the circle to obtain area" << endl;
 	while (true)
@@ -101,12 +119,16 @@ int main()
 		}
 	}
 	
-	
 	cout << "enter the table variables" << endl;
 	
 	for (int i = 0; i < size; i++)
 		cin >> table[i];
 	min_max_table(table, size);
+
+
+	cout << "enter the column and row size of the multiplication table" << endl;
+	cin >> column_size >> row_size;
+	Multiplication_Table(column_size, row_size);
 
 	cout << "enter the rank for Fibonacci Series " << endl;
 	cin >> rank;
