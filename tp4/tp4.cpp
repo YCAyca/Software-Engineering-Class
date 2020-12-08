@@ -19,7 +19,7 @@ class EX2 // Ex2
         EX2(int v1 = 0, int v2 = 0):var1(v1),var2(v2){}; // a default contructor is which can be called 
 };
 
-class Complex_Numbers
+class Complex_Numbers // Ex3
 {
     public:
         double real, imaginary;
@@ -49,6 +49,7 @@ int main()
     EX2 ex2(in1, in2);
     cout << "addition of these 2 integers is :" << ex2.var1 + ex2.var2 << endl;
     
+    // Ex3
     Complex_Numbers num1, num2 ,tmp;
     cout << "input first complex number (a bi)" << endl;
     cin >> num1.real >> num1.imaginary; 
